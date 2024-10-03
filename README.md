@@ -30,9 +30,9 @@ The idea of this project is to develop a replacement for the existing mechanical
 However, the new room temperature controller should be electronic and have the same function as the existing room temperature controller.
 
 Additionally, the room temperature controller should have the following features:
-- Adjustable temperature via display
+- Adjustable temperature
 - Automatic temperature control
-- Display for showing information
+- Touch display for showing information and controlling functions
 - Network connectivity (WiFi)
 - Web server for controlling the room temperature controller
 - MQTT for communication with other devices
