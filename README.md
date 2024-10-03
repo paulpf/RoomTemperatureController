@@ -36,6 +36,10 @@ The current room temperature controller is a mechanical device from the company 
 
 <img src="assets\20241003_115109.jpg" alt="alt text" width="500" style="height: auto;">
 
+The instruction manual can be found under the folder assets:
+- [Instruction Manual](assets\Anleitung-RTR-A10-und-RTR-A13.pdf)
+- [Circuit diagram](assets\Schaltplan-Temperaturregler-Fussbodenheizung.pdf)
+
 ## Realization
 
 
