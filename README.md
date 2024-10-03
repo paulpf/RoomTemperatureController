@@ -3,6 +3,7 @@
 ## Table of Contents
 1. [The Idea](#the-idea)
 2. [Current Room Temperature Controller](#current-room-temperature-controller)
+3. [Realization](#realization)
 
 ## The Idea
 
@@ -34,3 +35,7 @@ The current room temperature controller is a mechanical device from the company 
 <img src="assets\20241003_115052.jpg" alt="alt text" width="500" style="height: auto;">
 
 <img src="assets\20241003_115109.jpg" alt="alt text" width="500" style="height: auto;">
+
+## Realization
+
+
