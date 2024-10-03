@@ -97,7 +97,7 @@ Links:
 
 For measuring the brightness, the BH1750 sensor will be used. This sensor is implemented on an extensionboard for AZ-ONEBoard from the company AZ-Delivery. The sensor is connected via I2C. The sensor has a measurement range of 0 to 65535 Lux. The sensor has a resolution of 1 Lux.
 
-<img src="assets\bh1750.png" alt="alt text" width="300">
+<img src="assets\BH1750.png" alt="alt text" width="300">
 
 
 #### Display
