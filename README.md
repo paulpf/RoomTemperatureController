@@ -6,7 +6,7 @@
 
 ## Die Idee
 
-Die Idee dieses Projekts ist es, einen Ersatz für den bestehtenden mechamischen Raumtemperaturregler zu entwickeln. 
+Die Idee dieses Projekts ist es, einen Ersatz für den bestehtenden mechanischen Raumtemperaturregler zu entwickeln. 
 Der zu entwickelnde Raumtemperaturregler soll jedoch elektronisch sein und die selbe Funktion wie der bestehende Raumtemperaturregler haben.
 Desweitern soll der Raumtemperaturregler über folgende Features verfügen:
 - Einstellbare Temperatur über zwei Tasten
