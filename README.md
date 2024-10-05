@@ -1,27 +1,27 @@
-
-
 # Room Temperature Controller
 
 > **Note:** This documentation is still under construction.
 
-<img src="assets\underconstruction.png" alt="alt text" width="500" style="height: 80;">
+<img src="assets/underconstruction.png" alt="alt text" width="500" style="height: 80;">
 
-Table of Contents
+## Table of Contents
 
-  - [The Idea](#the-idea)
-  - [Current Room Temperature Controller](#current-room-temperature-controller)
-  - [Preliminary thoughts](#preliminary-thoughts)
-      - [Hardware components](#hardware-components)
-        - [Sensors](#sensors)
-          - [Kind of sensor connection](#kind-of-sensor-connection)
-          - [Temperature and Humidity Sensor](#temperature-and-humidity-sensor)
-          - [CO2 Sensor](#co2-sensor)
-          - [Brightness Sensor](#brightness-sensor)
-        - [Display](#display)
-        - [Relay](#relay)
-        - [Buttons](#buttons)
-        - [Controller](#controller)
-        - [Power Supply](#power-supply)
+- [The Idea](#the-idea)
+- [Current situation](#current-situation)
+  - [Room Temperature Controller](#room-temperature-controller)
+  - [Valve drive](#valve-drive)
+- [Preliminary thoughts](#preliminary-thoughts)
+  - [Hardware components](#hardware-components)
+    - [Sensors](#sensors)
+      - [Kind of sensor connection](#kind-of-sensor-connection)
+      - [Temperature and Humidity Sensor](#temperature-and-humidity-sensor)
+      - [CO2 Sensor](#co2-sensor)
+      - [Brightness Sensor](#brightness-sensor)
+    - [Display](#display)
+    - [Relay](#relay)
+    - [Buttons](#buttons)
+    - [Controller](#controller)
+    - [Power Supply](#power-supply)
 
 
 ## The Idea
@@ -45,19 +45,33 @@ Additionally, the room temperature controller should have the following features
 
 The software should be written in C++ and run on an ESP32. Additionally, a 3D-printed case should be used.
 
-## Current Room Temperature Controller
+## Current situation
+
+### Room Temperature Controller
 
 The current room temperature controller is a mechanical device from the company Halmburger, model RTR-A10.
 
-<img src="assets\20241003_120139.jpg" alt="alt text" width="500" style="height: auto;">
+<img src="assets/20241003_120139.jpg" alt="alt text" width="500" style="height: auto;">
 
-<img src="assets\20241003_115052.jpg" alt="alt text" width="500" style="height: auto;">
+<img src="assets/20241003_115052.jpg" alt="alt text" width="500" style="height: auto;">
 
-<img src="assets\20241003_115109.jpg" alt="alt text" width="500" style="height: auto;">
+<img src="assets/20241003_115109.jpg" alt="alt text" width="500" style="height: auto;">
 
 The instruction manual can be found under the folder assets:
-- [Instruction Manual](assets\Anleitung-RTR-A10-und-RTR-A13.pdf)
-- [Circuit diagram](assets\Schaltplan-Temperaturregler-Fussbodenheizung.pdf)
+- [Instruction Manual](assets/Anleitung-RTR-A10-und-RTR-A13.pdf)
+- [Circuit diagram](assets/Schaltplan-Temperaturregler-Fussbodenheizung.pdf)
+
+### Valve drive
+
+The valve drive is a mechanical device from the company Richter-Frenzel. The model is unknown.
+
+<img src="assets/ValveDrive.jpg" alt="alt text" width="500" style="height: auto;">
+
+In internet i found the following information about the valve, which is similar to the existing valve Link and it has the following technical electrical data:
+
+- Operating voltage: 230 V (AC) + 10 %…- 10 %, 50/60 Hz
+- Inrush current: < 250 mA for max. 300 ms
+- Operating power: < 3 W
 
 ## Preliminary thoughts
 
@@ -81,43 +95,35 @@ In this project, i will use digital sensors, because of easier wiring and the po
 
 For measuring the temperature and humidity, the DHT20 sensor from the company ASAIR will be used. The sensor is connected via I2C. The sensor has a measurement range of -40 to 80 degrees Celsius and 0 to 100% relative humidity.
 
-<img src="assets\DHT20.png" alt="alt text" width="300">
+<img src="assets/DHT20.png" alt="alt text" width="300">
 
 ##### CO2 Sensor
 
 For measuring the CO2 concentration, the CCS811 sensor will be used. The sensor is connected via I2C. The sensor has a measurement range of 400 to 8192 ppm. The sensor has an internal algorithm for calculating the CO2 concentration. The sensor also measures the TVOC (Total Volatile Organic Compounds) concentration. More information about the sensor can be found in the local documentation or on the website of the manufacturer.
 
-<img src="assets\CCS811.png" alt="alt text" width="300">
+<img src="assets/CCS811.png" alt="alt text" width="300">
 
 Links:
-- local documentation: [CCS811](assets\AZ363_D_14-10_DE_B0BN8V9PJV_a9e14072-22d6-4df1-897d-fb8e85ca8aa0.pdf)
+- local documentation: [CCS811](assets/AZ363_D_14-10_DE_B0BN8V9PJV_a9e14072-22d6-4df1-897d-fb8e85ca8aa0.pdf)
 - https://www.az-delivery.de/products/co2-gassensor-ccs811?variant=43961284002059
 
 ##### Brightness Sensor
 
 For measuring the brightness, the BH1750 sensor will be used. This sensor is implemented on an extensionboard for AZ-ONEBoard from the company AZ-Delivery. The sensor is connected via I2C. The sensor has a measurement range of 0 to 65535 Lux. The sensor has a resolution of 1 Lux.
 
-<img src="assets\BH1750.png" alt="alt text" width="300">
+<img src="assets/BH1750.png" alt="alt text" width="300">
 
 
 #### Display
 
 As a display, a 2.4 inch TFT touch display will be used. The display is connected via SPI. The display has a resolution of 320x240 pixels. The display has a touch function, which can also be used for controlling the room temperature controller.
 
-
 #### Relay
+
+Required for switching the valve is a relay. The relay is connected via a digital pin. The relay has a switching capacity of 250V AC and 10A.
 
 #### Buttons
 
 #### Controller
 
 #### Power Supply
-
-
-
-
-
-
-
-
-
