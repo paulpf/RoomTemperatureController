@@ -26,5 +26,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
 
-    - name: Build environment esp32dev-usb-devb
-      run: platformio run -e esp32dev-usb-dev
+    - name: Build environment esp32dev-usb-prod
+      run: platformio run -e esp32dev-usb-prod
