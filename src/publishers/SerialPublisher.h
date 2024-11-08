@@ -11,7 +11,7 @@ public:
     SerialPublisher();
     ~SerialPublisher();
     void setup();
-    void publish();
+    void publish(String message);
     
 private:
     static SerialPublisher *instance; // Static pointer to the instance

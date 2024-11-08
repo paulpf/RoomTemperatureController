@@ -25,7 +25,7 @@ void SerialPublisher::setup()
     Serial.println("Serial publisher is ready!");
 }
 
-void SerialPublisher::publish()
+void SerialPublisher::publish(String message)
 {
-
+    Serial.println(message);
 }
